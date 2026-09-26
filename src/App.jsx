@@ -77,7 +77,7 @@ function LoveTimer() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="z-10 w-full max-w-xl mx-auto bg-[#9c2d52] p-6 sm:p-8 rounded-3xl shadow-[0_15px_35px_rgba(156,45,82,0.35)] border-2 border-white/35 text-center"
+      className="z-10 w-full max-w-xl mx-auto bg-gradient-to-br from-[#ee7197] to-[#e45c85] p-6 sm:p-8 rounded-3xl shadow-[0_15px_35px_rgba(234,101,142,0.35)] border-2 border-white/50 text-center"
     >
       <div className="flex items-center justify-center gap-2.5 mb-6">
         <motion.span 
@@ -87,7 +87,7 @@ function LoveTimer() {
         >
           💖
         </motion.span>
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide">
+        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide drop-shadow-sm">
           Our Time
         </h3>
         <motion.span 
@@ -109,7 +109,7 @@ function LoveTimer() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.08 * index }}
             whileHover={{ scale: 1.06 }}
-            className="bg-[#801b3d] border border-white/20 rounded-2xl p-2.5 sm:p-3.5 shadow-sm flex flex-col items-center justify-center"
+            className="bg-[#c93f69] border border-white/30 rounded-2xl p-2.5 sm:p-3.5 shadow-sm flex flex-col items-center justify-center"
           >
             <span className="text-xl sm:text-3xl md:text-4xl font-bold text-white font-mono leading-none tracking-tight">
               {unit.value}
@@ -181,7 +181,7 @@ function CollageVideoCard({ video, index }) {
               exit={{ opacity: 0 }}
               className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[1px] group-hover:bg-black/40 transition-colors"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#9c2d52]/90 text-[#fff5f7] flex items-center justify-center shadow-xl border border-white/40 group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#ea658e]/95 text-white flex items-center justify-center shadow-xl border border-white/50 group-hover:scale-110 transition-transform">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -275,7 +275,7 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02 }}
-      className={`z-30 bg-[#9c2d52] p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl shadow-[0_14px_32px_rgba(0,0,0,0.28)] border-2 border-white/35 backdrop-blur-md flex flex-col justify-between ${className || ''}`}
+      className={`z-30 bg-gradient-to-br from-[#ee7197] to-[#e45c85] p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl shadow-[0_14px_32px_rgba(234,101,142,0.3)] border-2 border-white/50 backdrop-blur-md flex flex-col justify-between ${className || ''}`}
     >
       <audio
         ref={audioRef}
@@ -298,10 +298,10 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
           <motion.div
             animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
             transition={isPlaying ? { repeat: Infinity, duration: 4, ease: "linear" } : { duration: 0.5 }}
-            className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#801b3d] border-2 border-white/30 flex items-center justify-center shadow-md cursor-pointer"
+            className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#c93f69] border-2 border-white/40 flex items-center justify-center shadow-md cursor-pointer"
             onClick={togglePlay}
           >
-            <div className="w-4 h-4 rounded-full bg-[#ea85a0] border border-white/40 flex items-center justify-center">
+            <div className="w-4 h-4 rounded-full bg-[#FEBAE5] border border-white/40 flex items-center justify-center">
               <span className="text-[9px]">🎵</span>
             </div>
           </motion.div>
@@ -350,7 +350,7 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
         <button
           type="button"
           onClick={togglePlay}
-          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-[#9c2d52] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform shrink-0 cursor-pointer"
+          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-[#ea658e] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform shrink-0 cursor-pointer"
         >
           {isPlaying ? (
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -371,10 +371,10 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
         </span>
         <div
           onClick={handleSeek}
-          className="relative flex-1 h-2 bg-[#801b3d] rounded-full overflow-hidden cursor-pointer group"
+          className="relative flex-1 h-2 bg-[#c93f69] rounded-full overflow-hidden cursor-pointer group"
         >
           <div
-            className="h-full bg-gradient-to-r from-pink-300 to-white rounded-full transition-all duration-100"
+            className="h-full bg-gradient-to-r from-pink-200 to-white rounded-full transition-all duration-100"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -395,7 +395,7 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
   );
 }
 
-// ================= 3. PASSWORD SCREEN =================
+// ================= 3.5. PASSWORD GATE SCREEN =================
 function PasswordScreen({ onUnlock }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
@@ -418,7 +418,7 @@ function PasswordScreen({ onUnlock }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.6 }}
-      className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#ea85a0] px-4 text-center overflow-hidden"
+      className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#FEBAE5] px-4 text-center overflow-hidden"
     >
       <div 
         className="absolute left-0 top-0 h-full w-16 sm:w-32 pointer-events-none opacity-90"
@@ -435,16 +435,16 @@ function PasswordScreen({ onUnlock }) {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="z-10 flex flex-col items-center max-w-sm w-full"
       >
-        <div className="mb-4 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#9c2d52] text-[#fff5f7] shadow-xl border-2 border-white/30">
+        <div className="mb-4 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#ea658e] text-white shadow-xl border-2 border-white/50">
           <svg className="w-8 h-8 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
             <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
           </svg>
         </div>
 
-        <h2 className="font-serif text-2xl sm:text-3xl text-[#fff5f7] font-bold drop-shadow-md mb-2">
+        <h2 className="font-serif text-2xl sm:text-3xl text-[#7d1a3b] font-bold drop-shadow-sm mb-2">
           Enter Password 🔐
         </h2>
-        <p className="font-serif text-base sm:text-lg text-[#fff5f7] drop-shadow-sm mb-6">
+        <p className="font-serif text-base sm:text-lg text-[#7d1a3b] mb-6 font-medium">
           Enter the special date to open your gift ✨
         </p>
 
@@ -459,7 +459,7 @@ function PasswordScreen({ onUnlock }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="DD/MM/YYYY"
-              className="w-full text-center px-6 py-3.5 rounded-full bg-white text-[#4a362f] placeholder-pink-300 font-bold text-lg shadow-xl border-2 border-white/80 focus:outline-none focus:ring-4 focus:ring-[#9c2d52]/40 tracking-wider"
+              className="w-full text-center px-6 py-3.5 rounded-full bg-white text-[#4a362f] placeholder-pink-300 font-bold text-lg shadow-xl border-2 border-white/80 focus:outline-none focus:ring-4 focus:ring-[#ea658e]/40 tracking-wider"
               autoFocus
             />
           </motion.div>
@@ -468,7 +468,7 @@ function PasswordScreen({ onUnlock }) {
             <motion.p
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-2 text-sm font-bold text-red-100 bg-red-900/50 px-4 py-1 rounded-full drop-shadow font-sans"
+              className="mt-2 text-sm font-bold text-red-100 bg-red-900/60 px-4 py-1 rounded-full drop-shadow font-sans"
             >
               Incorrect password, please try again 🔒💔
             </motion.p>
@@ -478,7 +478,7 @@ function PasswordScreen({ onUnlock }) {
             type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-5 w-full rounded-full bg-[#9c2d52] px-8 py-3.5 font-serif text-sm uppercase tracking-widest text-[#fff5f7] shadow-xl border border-white/20 hover:bg-[#852243] transition-all cursor-pointer"
+            className="mt-5 w-full rounded-full bg-[#ea658e] px-8 py-3.5 font-serif text-sm uppercase tracking-widest text-white shadow-xl border border-white/40 hover:bg-[#d85079] transition-all cursor-pointer"
           >
             Unlock 💖
           </motion.button>
@@ -498,7 +498,7 @@ function PhotoRevealScreen({ onDismiss }) {
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.7 }}
       onClick={onDismiss}
-      className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#ea85a0] px-4 cursor-pointer overflow-hidden"
+      className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#FEBAE5] px-4 cursor-pointer overflow-hidden"
     >
       <div 
         className="absolute left-0 top-0 h-full w-16 sm:w-32 pointer-events-none opacity-90"
@@ -523,7 +523,7 @@ function PhotoRevealScreen({ onDismiss }) {
             alt="My Love" 
             className="w-full aspect-[3/4] object-cover rounded-xl shadow-inner" 
           />
-          <p className="mt-3 sm:mt-4 text-center font-hand text-xl sm:text-2xl text-[#9c2d52] font-bold tracking-wide">
+          <p className="mt-3 sm:mt-4 text-center font-hand text-xl sm:text-2xl text-[#ea658e] font-bold tracking-wide">
             Happy Birthday, Malak ♥️
           </p>
         </div>
@@ -531,7 +531,7 @@ function PhotoRevealScreen({ onDismiss }) {
         <motion.p
           animate={{ y: [0, -6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="mt-6 font-serif text-lg sm:text-xl text-[#fff5f7] drop-shadow-md text-center"
+          className="mt-6 font-serif text-lg sm:text-xl text-[#7d1a3b] font-semibold drop-shadow-sm text-center"
         >
           Tap the photo to continue ✨💌
         </motion.p>
@@ -606,7 +606,7 @@ export default function App() {
   };
 
   return (
-    <div className={`w-full bg-[#ea85a0] text-white ${showMain ? 'overflow-y-auto' : 'h-screen overflow-hidden'}`}>
+    <div className={`w-full bg-[#FEBAE5] text-[#7d1a3b] ${showMain ? 'overflow-y-auto' : 'h-screen overflow-hidden'}`}>
 
       {/* ================= STEP 1: PASSWORD SCREEN ================= */}
       <AnimatePresence>
@@ -629,12 +629,12 @@ export default function App() {
             key="envelope-screen"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#ea85a0]"
+            className="fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-[#FEBAE5]"
           >
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-10 sm:mb-12 -rotate-6 font-hand text-3xl sm:text-4xl text-[#fff5f7] relative right-12 sm:right-16 drop-shadow-md z-30"
+              className="mb-10 sm:mb-12 -rotate-6 font-hand text-3xl sm:text-4xl text-[#7d1a3b] relative right-12 sm:right-16 drop-shadow-sm z-30 font-bold"
             >
               open me!
             </motion.p>
@@ -673,15 +673,15 @@ export default function App() {
           style={{ backgroundImage: "url('/images/flowers-right.png')", backgroundRepeat: 'repeat-y', backgroundSize: '100% auto', backgroundPosition: 'right top' }}
         ></div>
 
-        <p className="z-10 mt-8 font-serif text-sm uppercase tracking-[0.15em] text-[#fff5f7] drop-shadow-sm max-w-xs sm:max-w-md">
+        <p className="z-10 mt-8 font-serif text-sm uppercase tracking-[0.15em] text-[#7d1a3b] font-bold drop-shadow-sm max-w-xs sm:max-w-md">
           To the most beautiful girl!
         </p>
 
-        <h1 className="z-10 my-2 font-script text-[6.5rem] leading-none text-[#fff5f7] drop-shadow-md sm:text-[9rem]">
+        <h1 className="z-10 my-2 font-script text-[6.5rem] leading-none text-[#8f2347] drop-shadow-sm sm:text-[9rem]">
           Malak
         </h1>
 
-        <p className="z-10 font-serif text-sm uppercase tracking-[0.2em] text-[#fff5f7] drop-shadow-sm">
+        <p className="z-10 font-serif text-sm uppercase tracking-[0.2em] text-[#7d1a3b] font-bold drop-shadow-sm">
           Happy birthday, love
         </p>
 
@@ -689,7 +689,7 @@ export default function App() {
 
         {/* Envelope with only photo 1 */}
         <div className="relative z-10 mt-10 h-64 w-[310px] sm:h-80 sm:w-[420px] flex items-end justify-center">
-          <div className="absolute bottom-0 h-44 w-full bg-[#e8b7c4] rounded-md shadow-inner sm:h-56"></div>
+          <div className="absolute bottom-0 h-44 w-full bg-[#f8a8d8] rounded-md shadow-inner sm:h-56"></div>
 
           <div className="absolute bottom-24 z-10 h-48 w-36 sm:bottom-32 sm:h-60 sm:w-44 bg-white p-2 sm:p-2.5 pb-6 sm:pb-8 shadow-polaroid rounded-sm rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300">
             <img src="/images/photo1.jpg" className="h-full w-full object-cover rounded-[2px]" alt="Pic 1" />
@@ -701,7 +701,7 @@ export default function App() {
           ></div>
         </div>
 
-        <div className="z-10 mt-16 mb-8 rounded-full bg-[#9c2d52] px-14 py-3.5 font-serif text-sm uppercase tracking-[0.3em] text-[#fff5f7] shadow-xl hover:scale-105 transition-transform cursor-pointer border border-[#fff5f7]/20">
+        <div className="z-10 mt-16 mb-8 rounded-full bg-[#ea658e] px-14 py-3.5 font-serif text-sm uppercase tracking-[0.3em] text-white shadow-xl hover:scale-105 transition-transform cursor-pointer border border-white/40 hover:bg-[#d85079]">
           I love u
         </div>
       </section>
@@ -780,7 +780,7 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative z-20 mx-auto text-center font-serif text-3xl sm:text-5xl uppercase tracking-widest text-[#fff5f7] drop-shadow-md mb-8 sm:mb-12"
+          className="relative z-20 mx-auto text-center font-serif text-3xl sm:text-5xl uppercase tracking-widest text-[#7d1a3b] font-bold drop-shadow-sm mb-8 sm:mb-12"
         >
           THESE VIDEOS ARE FOR YOU ✨
         </motion.h2>
@@ -854,7 +854,7 @@ export default function App() {
             onClick={handleRestart}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="rounded-full bg-[#9c2d52] px-10 py-4 font-serif text-sm uppercase tracking-widest text-[#fff5f7] shadow-xl border border-[#fff5f7]/20 cursor-pointer"
+            className="rounded-full bg-[#ea658e] px-10 py-4 font-serif text-sm uppercase tracking-widest text-white shadow-xl border border-white/40 hover:bg-[#d85079] transition-all cursor-pointer"
           >
             Read it again
           </motion.button>

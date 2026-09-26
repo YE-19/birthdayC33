@@ -76,7 +76,7 @@ function LoveTimer() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="z-10 w-full max-w-xl mx-auto bg-[#9c2d52] p-6 sm:p-8 rounded-3xl shadow-[0_15px_35px_rgba(156,45,82,0.35)] border-2 border-white/35 text-center"
+      className="z-10 w-full max-w-xl mx-auto bg-gradient-to-br from-[#ee7197] to-[#e45c85] p-6 sm:p-8 rounded-3xl shadow-[0_15px_35px_rgba(234,101,142,0.35)] border-2 border-white/50 text-center"
     >
       <div className="flex items-center justify-center gap-2.5 mb-6">
         <motion.span 
@@ -108,7 +108,7 @@ function LoveTimer() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.08 * index }}
             whileHover={{ scale: 1.06 }}
-            className="bg-[#801b3d] border border-white/20 rounded-2xl p-2.5 sm:p-3.5 shadow-sm flex flex-col items-center justify-center"
+            className="bg-[#c93f69] border border-white/30 rounded-2xl p-2.5 sm:p-3.5 shadow-sm flex flex-col items-center justify-center"
           >
             <span className="text-xl sm:text-3xl md:text-4xl font-bold text-white font-mono leading-none tracking-tight">
               {unit.value}
@@ -125,7 +125,7 @@ function LoveTimer() {
 
 export default function VideoAndLetter({ onContinue }) {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#ea85a0] px-4 py-14 sm:px-8">
+    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#FEBAE5] px-4 py-14 sm:px-8">
       {/* Floral borders */}
       <img
         src="/images/flowers-left.png"
@@ -145,7 +145,7 @@ export default function VideoAndLetter({ onContinue }) {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 mb-8 rounded-full bg-[#9c2d52] px-8 py-2 font-serif text-sm uppercase tracking-widest text-[#fff5f7] shadow-md"
+        className="relative z-10 mb-8 rounded-full bg-[#ea658e] px-8 py-2 font-serif text-sm uppercase tracking-widest text-white shadow-md border border-white/30"
       >
         I love u
       </motion.div>
@@ -207,7 +207,7 @@ export default function VideoAndLetter({ onContinue }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.97 }}
         aria-label="See our photos"
-        className="relative z-10 mt-10 rounded-full bg-[#9c2d52] px-8 py-3 font-serif text-sm uppercase tracking-widest text-[#fff5f7] shadow-lg border border-[#fff5f7]/20"
+        className="relative z-10 mt-10 rounded-full bg-[#ea658e] px-8 py-3 font-serif text-sm uppercase tracking-widest text-white shadow-lg border border-white/40 hover:bg-[#d85079] transition-all"
       >
         See our photos ↓
       </motion.button>

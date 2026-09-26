@@ -56,7 +56,7 @@ function CollageVideoCard({ video, index }) {
               exit={{ opacity: 0 }}
               className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[1px] group-hover:bg-black/40 transition-colors"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#9c2d52]/90 text-[#fff5f7] flex items-center justify-center shadow-xl border border-white/40 group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#ea658e]/95 text-white flex items-center justify-center shadow-xl border border-white/50 group-hover:scale-110 transition-transform">
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -148,7 +148,7 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02 }}
-      className={`z-30 bg-[#9c2d52] p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl shadow-[0_14px_32px_rgba(0,0,0,0.28)] border-2 border-white/35 backdrop-blur-md flex flex-col justify-between ${className || ''}`}
+      className={`z-30 bg-gradient-to-br from-[#ee7197] to-[#e45c85] p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl shadow-[0_14px_32px_rgba(234,101,142,0.3)] border-2 border-white/50 backdrop-blur-md flex flex-col justify-between ${className || ''}`}
     >
       <audio
         ref={audioRef}
@@ -171,10 +171,10 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
           <motion.div
             animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
             transition={isPlaying ? { repeat: Infinity, duration: 4, ease: "linear" } : { duration: 0.5 }}
-            className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#801b3d] border-2 border-white/30 flex items-center justify-center shadow-md cursor-pointer"
+            className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#c93f69] border-2 border-white/40 flex items-center justify-center shadow-md cursor-pointer"
             onClick={togglePlay}
           >
-            <div className="w-4 h-4 rounded-full bg-[#ea85a0] border border-white/40 flex items-center justify-center">
+            <div className="w-4 h-4 rounded-full bg-[#FEBAE5] border border-white/40 flex items-center justify-center">
               <span className="text-[9px]">🎵</span>
             </div>
           </motion.div>
@@ -223,7 +223,7 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
         <button
           type="button"
           onClick={togglePlay}
-          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-[#9c2d52] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform shrink-0 cursor-pointer"
+          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-[#ea658e] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform shrink-0 cursor-pointer"
         >
           {isPlaying ? (
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -244,10 +244,10 @@ function CollageAudioCard({ id, src, title, subtitle, className, isSpecial = fal
         </span>
         <div
           onClick={handleSeek}
-          className="relative flex-1 h-2 bg-[#801b3d] rounded-full overflow-hidden cursor-pointer group"
+          className="relative flex-1 h-2 bg-[#c93f69] rounded-full overflow-hidden cursor-pointer group"
         >
           <div
-            className="h-full bg-gradient-to-r from-pink-300 to-white rounded-full transition-all duration-100"
+            className="h-full bg-gradient-to-r from-pink-200 to-white rounded-full transition-all duration-100"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -315,7 +315,7 @@ export default function PhotoCollage({ onRestart }) {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#ea85a0] px-4 py-16 sm:px-10">
+    <div className="relative w-full overflow-hidden bg-[#FEBAE5] px-4 py-16 sm:px-10">
       
       {/* الإطارات الوردية (الخلفية) */}
       <img
@@ -337,7 +337,7 @@ export default function PhotoCollage({ onRestart }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative z-20 mx-auto text-center font-serif text-3xl sm:text-5xl uppercase tracking-widest text-[#fff5f7] drop-shadow-md mb-8 sm:mb-12"
+        className="relative z-20 mx-auto text-center font-serif text-3xl sm:text-5xl uppercase tracking-widest text-[#7d1a3b] font-bold drop-shadow-sm mb-8 sm:mb-12"
       >
         THESE VIDEOS ARE FOR YOU ✨
       </motion.h2>
@@ -412,7 +412,7 @@ export default function PhotoCollage({ onRestart }) {
           onClick={onRestart}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
-          className="rounded-full bg-[#9c2d52] px-10 py-4 font-serif text-sm uppercase tracking-widest text-[#fff5f7] shadow-xl border border-[#fff5f7]/20 cursor-pointer"
+          className="rounded-full bg-[#ea658e] px-10 py-4 font-serif text-sm uppercase tracking-widest text-white shadow-xl border border-white/40 hover:bg-[#d85079] transition-all cursor-pointer"
         >
           Read it again
         </motion.button>

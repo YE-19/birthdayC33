@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         mauve: {
-          DEFAULT: '#ea85a0',
-          dark: '#9c2d52',
+          DEFAULT: '#FEBAE5',
+          dark: '#ea658e',
         },
         cream: {
           DEFAULT: '#fff5f7',
